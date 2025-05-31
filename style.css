@@ -1,70 +1,95 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  font-family: sans-serif;
-  overflow-x: hidden; /* agora permite scroll vertical */
-}
-
-.container {
+.convite-container {
   position: relative;
   width: 100%;
+  max-width: 768px; /* largura da imagem */
+  margin: 0 auto;
 }
 
-.background {
+.convite-img {
   width: 100%;
-  height: auto; /* para manter proporção */
   display: block;
 }
 
-.button {
-  position: absolute;
-  width: 60%;
-  height: 40px;
+/* Botões posicionados em cima da imagem */
+.botao {
+ position: absolute;
+  background-color: rgba(0, 0, 128, 0.8); /* pode usar rgba(0,0,0,0) se quiser invisível depois */
+  color: white;
+  width: 230px; /* ⬅️ Aumente ou ajuste até cobrir o botão da imagem */
+  height: 60px;  /* opcional, se quiser altura fixa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  font-weight: bold;
   cursor: pointer;
+  z-index: 2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0;
+   background: none;
+  color: transparent;
+  border: none;
+  pointer-events: auto;
 }
 
-/* Ajuste os valores de acordo com a nova proporção da imagem */
-.confirm {
-  top: 1200px;
-  left: 20%;
-}
-.map {
-  top: 1280px;
-  left: 20%;
-}
-.gift {
-  top: 1360px;
-  left: 20%;
+/* POSICIONAMENTO manual dos botões */
+.botao-confirmar {
+  top: 57%;   /* ajuste conforme necessário */
+  left: 70%;
+  transform: translate(-50%, -50%);
 }
 
+.botao-localizacao {
+  top: 65%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.botao-presente {
+  top: 72%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo do balão */
 .overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
 }
 
-.popup {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  max-width: 400px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  z-index: 11;
+.balao {
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0c2049;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  color: white;
+  text-align: center;
+}
+
+.titulo-balao {
+    font-size: 24px;      /* Tamanho maior */
+    font-weight: bold;    /* Negrito */
+    margin-bottom: 15px;  /* Espaço abaixo do título */
 }
