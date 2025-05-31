@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite Isadora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="b.neve isadora.png" alt="Convite" class="background">
+
+    <!-- Balão escurecendo fundo -->
+    <div id="overlay" class="overlay" onclick="closeAll()"></div>
+
+    <!-- Balão: Localização -->
+    <div id="map-popup" class="popup">
+      <iframe
+        src="https://www.google.com/maps?q=-15.7801,-47.9292&z=15&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Balão: Sugestão de presente -->
+    <div id="gift-popup" class="popup">
+      <h3>Sugestão de Presente 🎁</h3>
+      <p>Isadora ama livros, acessórios de princesa e brinquedos educativos.</p>
+    </div>
+
+    <!-- Áreas clicáveis -->
+    <div class="button confirm" onclick="confirmarPresenca()"></div>
+    <div class="button map" onclick="mostrarMapa()"></div>
+    <div class="button gift" onclick="mostrarPresente()"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
