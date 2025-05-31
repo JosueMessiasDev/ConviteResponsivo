@@ -1,19 +1,15 @@
-function closeAll() {
-  document.getElementById("overlay").style.display = "none";
-  document.getElementById("map-popup").style.display = "none";
-  document.getElementById("gift-popup").style.display = "none";
-}
-
-function confirmarPresenca() {
-  window.open("https://wa.me/SEUNUMEROAQUI", "_blank");
-}
-
 function mostrarMapa() {
   document.getElementById("overlay").style.display = "block";
-  document.getElementById("map-popup").style.display = "block";
+  document.getElementById("balao-mapa").style.display = "block";
 }
 
 function mostrarPresente() {
   document.getElementById("overlay").style.display = "block";
-  document.getElementById("gift-popup").style.display = "block";
+  document.getElementById("balao-presente").style.display = "block";
+}
+
+function fecharBalao() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("balao-mapa").style.display = "none";
+  document.getElementById("balao-presente").style.display = "none";
 }
